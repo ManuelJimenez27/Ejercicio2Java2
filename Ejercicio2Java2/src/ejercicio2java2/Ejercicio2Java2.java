@@ -55,8 +55,10 @@ public class Ejercicio2Java2 {
                 int minTotales = (4 * 24 * 60) + (15 * 60);       
                 int minActuales = (diasemana * 24 * 60) + (ihora * 60) + minutosr;
                 String minAct = Integer.toString(minActuales);
-                System.out.print("Faltan " + (minTotales - minActuales) + " minutos para llegar al fin de semana.");
-                //int iminutos = Integer.parseInt(minutos);
+                int minres;
+                minres= minTotales - minActuales;
+                System.out.print("Faltan " + minres + " minutos para el fin de semana.");
+                
         }
     }
   
