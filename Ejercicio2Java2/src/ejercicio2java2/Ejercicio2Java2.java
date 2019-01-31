@@ -19,11 +19,13 @@ public class Ejercicio2Java2 {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         int diasemana = 0;
-        String dia=null;
-        String hora=null;
+        String dia = "";
+        String hora= "";
+        System.out.println("Introduzca el dia: ");
+        dia = sc.nextLine();
         switch(dia){
             case "Lunes":
-                diasemana=1;
+                diasemana=0;
                 break;
             case "Martes":
                 diasemana=1;
@@ -40,19 +42,20 @@ public class Ejercicio2Java2 {
             default: 
                 System.out.println("El dia introducido no es correcto");
         }
+       
                 System.out.println("Introduzca la hora");
                 hora=sc.nextLine();
                 String string = hora;
                 String[] parts = string.split(":");
-                String part1 = parts[0]; // 123
-                String part2 = parts[1]; // 654321
+                String part1 = parts[0]; 
+                String part2 = parts[1]; 
                 int minutosr= Integer.parseInt(part2);
                 int minutos = 0;
-                int ihora = Integer.parseInt(hora); 
-                int minutosTotales = (4 * 24 * 60) + (15 * 60);       
-                int minutosActuales = (diasemana * 24 * 60) + (ihora * 60) + minutosr;
-                String minAct = Integer.toString(minutosActuales);
-                System.out.print("Faltan " + (minutosTotales - minutosActuales) + " minutos para llegar al fin de semana.");
+                int ihora = Integer.parseInt(part1); 
+                int minTotales = (4 * 24 * 60) + (15 * 60);       
+                int minActuales = (diasemana * 24 * 60) + (ihora * 60) + minutosr;
+                String minAct = Integer.toString(minActuales);
+                System.out.print("Faltan " + (minTotales - minActuales) + " minutos para llegar al fin de semana.");
                 //int iminutos = Integer.parseInt(minutos);
         }
     }
